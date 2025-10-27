@@ -30,11 +30,11 @@ while (movieArray.length < number) {
     }
     movie.title = prompt(`Give title of movie ${movieArray.length+1}: `);
 
-    movie.rating = prompt(`Give rating of movie ${movieArray.length+1}: `);
-    if(movie.rating < 1 || movie.rating > 5) {
-        alert("Rating has to be in range 1-5")
-    } else {
+    movie.rating = Number(prompt(`Give rating of movie ${movieArray.length+1}: `));
+    if(movie.rating >= 1 && movie.rating <= 5) {
         movieArray.push(movie);
+    } else {
+        alert("Rating has to be in range 1-5")
     }
 
 }
